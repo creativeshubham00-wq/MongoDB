@@ -86,13 +86,13 @@ public class StudentController {
 		return studentService.bySubjectName(subName);
 	}
 	
-	@GetMapping("/emailLike")
-	public List<Student> emailLike(@RequestParam String email) {
-		return studentService.emailLike(email);
-	}
-	
 	@GetMapping("/nameStartsWith")
 	public List<Student> nameStartsWith(@RequestParam String name) {
 		return studentService.nameStartsWith(name);
+	}
+	
+	@GetMapping("/byDepartmentId")
+	public List<Student> byDepartmentId(@RequestParam String deptId) {
+		return studentService.byDepartmentId(deptId);
 	}
 }
